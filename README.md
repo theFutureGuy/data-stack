@@ -1,6 +1,11 @@
 # Data-Stack
 ## React | Nodejs | Postgres
 This app built in React, Node.js, Express.js and Postgres.
+Postgres replication i have runned in ubuntu server.
+There are two types of replications: 
+ 1) Logical Replication
+ 2) Physical Replication
+We uses Logical Replication. 
 
 Replication in Postgres :
 commands:
