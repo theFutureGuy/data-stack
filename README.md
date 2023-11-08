@@ -19,9 +19,9 @@ commands:
    -> wal_log_hints = on
 5) Now in /etc/postgresql/14/main/pg_hba.conf:
    Append this line to file
-    -> host  replication   replica_user  139.144.169.79/24   md5
+    -> host  replication   replica_user  IP_ADDRESS   md5
 6) Config the replica node by run this cmd in adminstrator mode:
-   ->sudo pg_basebackup -h 194.195.208.82 -U replica_user -X stream -C -S replica_1 -v -R -W -D /var/lib/postgresql/14/main/
+   ->sudo pg_basebackup -h IP_ADDRESS_SERVER -U replica_user -X stream -C -S replica_1 -v -R -W -D /var/lib/postgresql/14/main/
 
 7) execute the following command on the replica to grant ownership of the data directory to the postgres user.
     -> sudo chown postgres -R /var/lib/postgresql/14/main/
